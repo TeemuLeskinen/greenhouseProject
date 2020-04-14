@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset = "utf-8">
-        <title> SNOWBOARDSHOP.COM</title> 
+        <title> Greenhouse </title> 
         <link rel = "stylesheet" href = "CSS/mystyle.css">   
     </head>
     
