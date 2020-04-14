@@ -1,0 +1,83 @@
+html,
+body{
+    height: 100%;
+    width: 100%;
+}
+#header{
+    
+    border-bottom: 1px;
+    border-color: rgb(76, 89, 84);    
+
+}
+
+#menu{
+    background-color: rgb(212, 243, 230);
+    float: left;
+    width: 150px;
+    height: 100%;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+        
+}
+#menu ul li{
+    list-style: none;
+          
+}
+
+#menu ul li:visited{
+    color: green;
+}
+
+#menu ul li a{
+    text-decoration: none;
+}
+
+#menu ul li a:hover{
+    background-color: rgb(191, 245, 207);
+    width: 100%;
+}
+
+#content{
+    background-color: white;
+    margin-left: 180px;
+}
+
+#footer{
+    background-color: white;
+    margin-top: 200px;
+    text-align: center;
+    border-top:1px solid grey;
+    
+    
+
+}
+
+h1{
+    color: rgb(15, 46, 29);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    text-align: left;
+    
+    
+}
+
+h2{
+    color: rgb(15, 46, 29);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h3{
+    color: rgb(15, 46, 29);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h4{
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+
+}
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(22, 66, 42);
+}
