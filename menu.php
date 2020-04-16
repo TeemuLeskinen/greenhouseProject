@@ -11,4 +11,12 @@
         Greenhouse
         </h1>
 
+        <div id = "menu">
+         <ul>
+         <li><a href="data.php"> Data</a></li>
+         
+         </ul>
+        
+        </div>
+
 <div id="content">
