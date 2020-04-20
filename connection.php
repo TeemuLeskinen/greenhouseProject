@@ -4,7 +4,7 @@
 	{
 	 $dsn = "mysql:host=localhost;dbname=testdatabase";
 	 $db = new PDO ($dsn, "testaaja", "projekti");
-	 //print ("Connected\n");
+	 print ("Connected\n");
 	}
 	catch (PDOException $e)
 	{
