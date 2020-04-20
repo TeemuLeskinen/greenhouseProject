@@ -1,11 +1,13 @@
 <?php include "menu.php"; ?>
 <?php include "connection.php"; ?>
 
-<h2> Temp </h2>
-
 <?php
-$sql="SELECT * FROM mittari";
+$sql="SELECT * FROM mittari ORDER BY date DESC ";
 $temperature = $db->query($sql); 
+?>
+<?php
+$sql="SELECT * FROM mittari ORDER BY date DESC ";
+$day = $db->query($sql); 
 ?>
 
 	<h2> Temperature data </h2>
@@ -17,12 +19,17 @@ $temperature = $db->query($sql);
 			echo '<h3>Temperature</h3>';
 			foreach ($temperature as $row) {				
 				echo '<p>';
-				echo $row['temperature'].'';
-				echo ' c                     ';
-				echo $row['date'].'<br>';
+				echo $row['temperature'].' C°';
+				echo '&nbsp;&nbsp;&nbsp;';
+				//echo $row['date'].'<br>';
+				$timestamp_rest = substr($row["date"],-8);
+				echo "$timestamp_rest";
 				echo '</p>';
 				
 				}
+			$timestamp_rest = substr($row["date"],-8);
+			echo "$timestamp_rest";	
+			
 				
 				
 			/*$temp = array("22", "25", "32");
