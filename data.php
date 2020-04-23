@@ -2,15 +2,15 @@
 <?php include "connection.php"; ?>
 
 <?php
-$sql="SELECT * FROM mittari ORDER BY date DESC ";
+$sql="SELECT * FROM mittari ORDER BY date DESC LIMIT 10 ";
 $temperature = $db->query($sql); 
 ?>
 <?php
-$sql="SELECT * FROM mittari ORDER BY date DESC ";
-$day = $db->query($sql); 
+$sql="SELECT luminousity, date FROM mittari ORDER BY date DESC LIMIT 10";
+$luminousity = $db->query($sql); 
 ?>
 
-	<h2> Temperature data </h2>
+	<h2> Data </h2>
 	<p>
 		<ul>
 		
@@ -21,24 +21,25 @@ $day = $db->query($sql);
 				echo '<p>';
 				echo $row['temperature'].' C°';
 				echo '&nbsp;&nbsp;&nbsp;';
-				//echo $row['date'].'<br>';
-				$timestamp_rest = substr($row["date"],-8);
-				echo "$timestamp_rest";
+				echo $row['date'].'<br>';
 				echo '</p>';
 				
 				}
-			$timestamp_rest = substr($row["date"],-8);
-			echo "$timestamp_rest";	
-			
 				
+			echo '<h3>Luminousity</h3>';
+			foreach ($luminousity as $row) {				
+				echo '<p>';
+				echo $row['luminousity'].' lux';
+				echo '&nbsp;&nbsp;&nbsp;';
+				echo $row['date'].'<br>';
+				echo '</p>';
 				
-			/*$temp = array("22", "25", "32");
-			
-			echo 'Temperature is ' .$temp[1];*/
-
+				}		
 
 			?>
 
 		</ul>
 	</p>
+	
+
 <? include "footer.php"; ?>
